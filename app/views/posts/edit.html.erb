@@ -1,0 +1,14 @@
+<%= form_with model: @post, url: post_path(post_id: @post.id) , method: :put do |a|%>
+
+<p>
+
+<%= a.label :Caption %>
+<%= a.text_field :caption %>
+</p>
+
+
+<p>
+<%= a.submit"update"%>
+</p>
+<%end%>
+<%= link_to "back" , root_path %>

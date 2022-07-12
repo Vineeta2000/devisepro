@@ -1,0 +1,20 @@
+
+<h1>Post</h1>
+<table>
+ <tr>
+   <th>Caption</th>
+  
+
+<% @posts.each do |post| %>
+   <tr>
+
+
+   <td><%= post.caption %></td>  
+   
+   <td><%= link_to "show" ,  post_path(post.id )%></td>
+   <td><%= link_to "edit",  edit_post_path(post) %></td>
+   <td><%= link_to 'delete' , post_path(post.id) , method: :delete %></td>
+   
+ </tr>
+<%end%>
+</table>
